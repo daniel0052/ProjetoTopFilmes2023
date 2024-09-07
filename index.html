@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Filmes | 2023</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  
+
+    <header><!--Titulo Principal-->
+        <h1 >Top 10 Filmes Populares De 2023</h1>
+    </header> 
+    
+    <main>
+        <section><!--Parte de pesquisa-->
+           <input id="campo-pesquisa" type="text" placeholder="Digite o nome do filme, ator ou gênero para ver mais">  
+           <button id="botao" onclick="pesquisar()">Pesquisar</button>      
+        </section>
+        
+        <div class="imagem-container">
+            <!--Imagens com titulo em cima-->
+            <figure class="imagem">
+                <figcaption><h3>Oppenheimer</h3></figcaption>
+                <img src="img/foto1.jpg" alt="Oppenheimer"> 
+            </figure>
+
+            <figure class="imagem">
+                <figcaption><h3>Pobres Criaturas</h3></figcaption>
+                <img src="img/foto2.jpg" alt="Pobres Criaturas">
+            </figure>
+
+            <figure class="imagem">
+                <figcaption><h3>Barbie</h3></figcaption>
+                <img src="img/foto3.jpg" alt="Barbie">
+            </figure>
+            
+            <figure class="imagem">
+                <figcaption><h3>Assassinos da Lua das Flores</h3></figcaption>
+                <img src="img/foto4.jpg" alt="Assassinos da Lua das Flores">
+            </figure>
+
+            <figure class="imagem">
+                <figcaption><h3>John Wick 4: Baba Yaga</h3></figcaption>
+                <img src="img/foto5.jpg" alt="John Wick 4: Baba Yaga">
+            </figure>
+
+            <figure class="imagem">
+                <figcaption><h3>Os Rejeitados</h3></figcaption>
+                <img src="img/foto6.jpg" alt="Os Rejeitados">
+            </figure>
+            
+            <figure class="imagem">
+                <figcaption><h3>Dias Perfeitos</h3></figcaption>
+                <img src="img/foto7.jpg" alt="Dias Perfeitos">
+            </figure>
+
+            <figure class="imagem">
+                <figcaption><h3>Garra de Ferro</h3></figcaption>
+                <img src="img/foto8.jpg" alt="Garra de Ferro">
+            </figure>
+
+            <figure class="imagem">
+                <figcaption><h3>Homem-Aranha: Através do Aranhaverso</h3></figcaption>
+                <img style="margin-top: -12px;" src="img/foto9.jpg" alt="Homem-Aranha: Através do Aranhaverso">
+            </figure>
+
+            <figure class="imagem">
+                <figcaption><h3>Anatomia de uma Queda</h3></figcaption>
+                <img src="img/foto10.jpg" alt="Anatomia de uma Queda">
+            </figure>
+
+        </div>
+        <!--Resultado dados do js-->
+        <section class="resultados-pesquisa" id="resultados-pesquisa">
+
+        </section>
+    </main>
+
+    <!--Rodapé-->
+    <footer>
+        <p>2024 - TopFilmes. Todos os direitos reservados</p>
+    </footer>
+
+    <script src="javascript/app.js"></script>
+    <script src="javascript/dados.js"></script>
+</body>
+</html>
