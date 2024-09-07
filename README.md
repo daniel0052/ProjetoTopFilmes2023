@@ -1,6 +1,6 @@
 ##  TOP Filmes: Para assistir sempre os melhores!
 
-**Descubra os melhores filmes de 2023!**  Com esse projeto, você tem acesso a uma lista incrível dos filmes mais populares de 2023. Quer saber mais sobre um filme específico? Basta digitar o título, ator ou gênero na nossa busca super rápida!
+**Descubra os melhores filmes de 2023!**  Com esse projeto, você tem acesso a uma lista incrível dos filmes mais populares de 2023, de acordo com o renomado site IMDb. Quer saber mais sobre um filme específico? Basta digitar o título, ator ou gênero na nossa busca super rápida!
 
 **O que você vai encontrar por aqui:**
 
