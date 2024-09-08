@@ -124,20 +124,21 @@ figcaption {
 /* Estilo para imagem e video */
 .media-container {
     display: flex;
-    justify-content: space-between; /* Espaçamento entre os itens */
-    align-items: stretch; /* Alinha os itens pela altura */
-    width: 100%; /* Ajusta o contêiner para a largura total */
-    gap: 1rem; /* Espaço entre os elementos */
-  }
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap; /* Permite que os elementos quebrem para uma nova linha se necessário */
+}
 
 .media-item {
-    height: 400px; /* Define uma altura comum para ambos */
-    object-fit: cover; /* Para manter a proporção da imagem */
-    flex: 1; /* Permite que os elementos se ajustem ao espaço */
+    height: 400px;
+    object-fit: cover;
+    flex: 1;
 }
 
 .media-container iframe {
-    flex: 2; /* O vídeo pode ocupar mais espaço que a imagem */
+    flex: 2;
 }
 
 .media-image {
@@ -185,6 +186,21 @@ footer {
 @media (max-width: 768px) {
     .imagem-container {
         grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas médias */
+    }
+
+    .media-container {
+        flex-direction: column; /* Coloca a imagem e o vídeo um abaixo do outro */
+        align-items: center; /* Centraliza os itens no contêiner */
+    }
+
+    .media-item {
+        width: 100%; /* Faz com que ambos ocupem 100% da largura */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    .media-container iframe {
+        width: 100%; /* O vídeo também ocupa toda a largura */
+        height: auto; /* A altura do vídeo se ajusta automaticamente */
     }
 
     h1 {
