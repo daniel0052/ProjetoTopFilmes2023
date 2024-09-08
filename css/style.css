@@ -4,7 +4,7 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Monospace", sans-serif; /* Define a fonte padrão */
-    background: #DDDDDD url(../img/fundo.jpg) ; /* Fundo
+    background: #DDDDDD url(../img/fundo.jpg) ; /* Fundo */
     background-size: cover;
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
@@ -64,8 +64,7 @@ section button:hover {
 .resultados-pesquisa {
     width: 70rem; /* Largura máxima da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-    margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
-    margin-left: 6rem;
+    margin: 1rem auto; /* Centraliza horizontalmente e adiciona margem superior */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
 }
@@ -96,20 +95,21 @@ section button:hover {
 /* Estiliza as imagens */
 
 .imagem-container img {
-    width: 100%; /* Faz com que as imagens ocupem toda a largura da coluna */
-    height: auto; /* Mantém a proporção da imagem */;
-    object-fit: cover; /* Faz a imagem preencher todo o container, recortando as partes que não cabem */
+    width: 100%; /* Ocupa toda a largura da célula */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover;
 }
 
 .imagem-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Cria 5 colunas de tamanho igual */
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas para telas maiores */
     gap: 20px; /* Espaçamento entre as imagens */
+    padding: 10px;
 }
 
 .imagem {
-    padding: 1;
-    margin: 0.1em;
+    padding: 0;
+    margin: 0;
 }
 .imagem h3 {
     font-size: 1rem;
@@ -121,7 +121,30 @@ figcaption {
     font-size: 14px;
     margin-top: 5px;
 }
+/* Estilo para imagem e video */
+.media-container {
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: stretch; /* Alinha os itens pela altura */
+    width: 100%; /* Ajusta o contêiner para a largura total */
+    gap: 1rem; /* Espaço entre os elementos */
+  }
 
+.media-item {
+    height: 400px; /* Define uma altura comum para ambos */
+    object-fit: cover; /* Para manter a proporção da imagem */
+    flex: 1; /* Permite que os elementos se ajustem ao espaço */
+}
+
+.media-container iframe {
+    flex: 2; /* O vídeo pode ocupar mais espaço que a imagem */
+}
+
+.media-image {
+    width: 30%; /* Defina a largura da imagem */
+    max-width: 300px; /* Limita o tamanho máximo da imagem */
+    height: auto; /* Garante que a altura seja proporcional */
+}
 /* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
     font-size: 2rem; /* Tamanho da fonte */
@@ -161,7 +184,7 @@ footer {
 
 @media (max-width: 768px) {
     .imagem-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas menores */
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas médias */
     }
 
     h1 {
@@ -193,7 +216,8 @@ footer {
     }
 
     section input {
-        width: 17rem; /* Largura total dos inputs em telas pequenas */
+        width: 80%; /* Largura total dos inputs em telas pequenas */
+        padding: 0.8rem;
     }
 
     section button {
@@ -202,8 +226,12 @@ footer {
     }
 
     .resultados-pesquisa {
-        width: 90%; /* Largura da caixa de resultados em telas pequenas */
-        height: 50vh; /* Altura da caixa de resultados em telas pequenas */
+        width: 100%; /* Largura da caixa de resultados em telas pequenas */
+        height: auto; /* Altura da caixa de resultados em telas pequenas */
+    }
+
+    .imagem-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas pequenas */
     }
 
     .item-resultado h2 {

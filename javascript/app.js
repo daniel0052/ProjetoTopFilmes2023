@@ -42,8 +42,10 @@ function pesquisar() {
             resultados += `
             <div class="item-resultado">
                 <h2 style="text-align: center;">${dado.titulo}: <h3 style="text-align: center; color: #222831; ">Top: ${dado.top}</h3></h2>
-                <img width="25%" height="400" " src="${dado.imagem}">
-                <iframe width="70%" height="400" style="float: right";  src="${dado.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="media-container">
+                <img class="media-image" src="${dado.imagem}" alt="image">
+                <iframe class="media-video" src="${dado.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
                 <p class="descricao-meta" style="color:#222831;">Ano de lançamento: ${dado.anoLancamento}</p>
                 <p class="descricao-meta">${dado.descricao}</p>
                 <span>Nota: </span><span class="nota">${dado.nota}</span><span class="meta"> Metascore <a href="https://www.imdb.com/list/ls569249036/?year=2023%2C&sort=popularity%2Casc&view=compact" target="_blank">IMDb</a></span>
